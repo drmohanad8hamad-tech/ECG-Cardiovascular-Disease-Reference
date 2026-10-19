@@ -1,1 +1,103 @@
-# ECG-Cardiovascular-Disease-Reference
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f8f6">
+  <meta name="description" content="An interactive educational reference for ECG interpretation and common cardiovascular conditions.">
+  <title>ECG &amp; Cardiovascular Disease Reference</title>
+  <link rel="stylesheet" href="src/app.css">
+  <script src="src/app.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    <div class="masthead">
+      <div class="wrap masthead-inner">
+        <span class="mast-author">
+          <span class="mast-seal" aria-hidden="true">
+            <svg viewBox="0 0 48 48">
+              <rect x="3" y="3" width="42" height="42" rx="12" fill="none" stroke="currentColor" stroke-width="2.4"/>
+              <path d="M8 25h7l3-8 5 16 5-11 2.5 5h6.5" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="mast-name">Dr. Mohanad Hamad</span>
+          <span class="mast-role">Medical Supervisor &amp; Creator</span>
+        </span>
+        <span class="mast-tag">Academic Medical Education Platform</span>
+      </div>
+    </div>
+
+    <header class="topbar">
+      <div class="wrap">
+        <div class="brand">
+          <div class="logo" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M2 12h3l2-5 3 8 3-11 3 11 3-5 3 2H22M6 19h12"/></svg>
+          </div>
+          <div class="brand-text">
+            <h1>ECG &amp; Cardiovascular Disease Reference</h1>
+            <p class="tagline">Interactive clinical atlas <span aria-hidden="true">&middot;</span> 12-lead ECG interpretation <span aria-hidden="true">&middot;</span> Evidence-informed care</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="picker" aria-label="Condition selector">
+        <div class="wrap picker-row">
+          <label for="caseSelect">
+            <span class="picker-label">Select a condition or ECG pattern</span>
+            <span class="picker-hint">The ECG schematic, clinical notes, and illustrative heart sound update with your selection</span>
+          </label>
+          <div class="picker-controls">
+            <select id="caseSelect" aria-label="Cardiovascular condition"></select>
+            <button id="randomBtn" type="button"><span aria-hidden="true">↻</span> Random case</button>
+          </div>
+        </div>
+      </section>
+
+      <div id="caseContent" class="wrap case" aria-live="polite">
+        <div class="empty" id="loadingEl">Loading the reference library…</div>
+      </div>
+    </main>
+
+    <footer class="foot">
+      <div class="wrap">
+        <div class="foot-attribution">
+          <span class="foot-seal" aria-hidden="true">
+            <svg viewBox="0 0 48 48">
+              <rect x="3" y="3" width="42" height="42" rx="12" fill="none" stroke="currentColor" stroke-width="2.4"/>
+              <path d="M8 25h7l3-8 5 16 5-11 2.5 5h6.5" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <div class="foot-attribution-text">
+            <span class="foot-created">Created and Medically Supervised by</span>
+            <span class="foot-name">Dr. Mohanad Hamad</span>
+          </div>
+        </div>
+        <div class="foot-contact">
+          <a class="contact-link" href="https://www.instagram.com/dr.mhn.d?igsh=bnh6bGIwOGNxbTl0" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile of Dr. Mohanad Hamad">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              <circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/>
+            </svg>
+            <span class="contact-label">Instagram</span>
+            <span class="contact-value">@dr.mhn.d</span>
+          </a>
+          <span class="contact-divider" aria-hidden="true"></span>
+          <a class="contact-link" href="mailto:drmohanad8hamad@gmail.com" aria-label="Email Dr. Mohanad Hamad">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M3.5 7l8.5 6 8.5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="contact-label">Email</span>
+            <span class="contact-value">drmohanad8hamad@gmail.com</span>
+          </a>
+        </div>
+        <div class="foot-rule" aria-hidden="true"></div>
+        <p class="foot-disclaimer">For medical education only; not a substitute for clinical judgment. ECGs and heart sounds are illustrative simulations, not patient recordings. They cannot diagnose disease. Use current local guidance and assess the individual patient.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
